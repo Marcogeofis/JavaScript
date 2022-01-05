@@ -21,21 +21,6 @@
         <button>Play/Pause</button>
     </main>
 
-    <script>
-        const video = document.querySelector("video");
-        const button = document.querySelector("button");
-
-        // clase
-        function MediaPlayer() {} 
-
-        // metodo prototype
-        MediaPlayer.prototype.play = function() {
-            video.play();
-        }
-       
-        // asignamos la clase  auna variable
-        const player = new MediaPlayer();
-        button.onclick = () => player.play();   
-    </script>
+    <script src="assets/index.js"></script>
 </body>
 </html>
