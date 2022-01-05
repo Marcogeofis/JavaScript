@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Platzi Videos</title>
+</head>
+<body>
+    <header>
+        <h1>PlatziMediaPlayer.js</h1>
+        <p>An extensible media player.</p>
+    </header>
+    <main class="container">
+        <video class="movie">
+            <source src="https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4">
+        </video>
+
+        <button>Play/Pause</button>
+    </main>
+
+    <script>
+        const video = document.querySelector("video");
+        const button = document.querySelector("button");
+
+        // clase
+        function MediaPlayer() {} 
+
+        // metodo prototype
+        MediaPlayer.prototype.play = function() {
+            video.play();
+        }
+       
+        // asignamos la clase  auna variable
+        const player = new MediaPlayer();
+        button.onclick = () => player.play();   
+    </script>
+</body>
+</html>
